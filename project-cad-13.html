@@ -22,7 +22,7 @@
   .title-block{padding:48px 0 32px;border-bottom:1px solid var(--line)}
   .ptype{font-family:var(--mono);font-size:.8rem;color:var(--blue);margin:0 0 10px}
   h1{font-size:2rem;margin:0 0 20px}
-  .meta-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;font-family:var(--mono);font-size:.78rem;border-top:1px solid var(--line);padding-top:18px}
+  .meta-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;font-family:var(--mono);font-size:.78rem;border-top:1px solid var(--line);padding-top:18px;max-width:400px}
   .meta-strip div span{display:block;color:var(--steel);margin-bottom:4px}
 
   section{padding:40px 0;border-bottom:1px solid var(--line)}
@@ -43,7 +43,7 @@
   .tools span{font-family:var(--mono);font-size:.75rem;border:1px solid var(--line);padding:5px 10px}
 
   @media (max-width:700px){
-    .meta-strip{grid-template-columns:repeat(2,1fr)}
+    .meta-strip{max-width:none}
     .box{max-width:none}
     .gallery{grid-template-columns:repeat(2,1fr)}
   }
@@ -54,14 +54,12 @@
 <header><div class="wrap"><a class="back" href="index.html">&larr; Back to portfolio</a></div></header>
 
 <div class="title-block wrap">
-  <p class="ptype">RESIDENTIAL — BUILT — 2023</p>
+  <p class="ptype">[AUTOCAD OR SKETCHUP] — [YEAR]</p>
   <h1>[Project Name]</h1>
   <p>One or two sentences on what the project was and where it's located — replace with real details.</p>
   <div class="meta-strip">
     <div><span>LOCATION</span>[City, Province]</div>
-    <div><span>PROJECT TYPE</span>[Residential / Commercial]</div>
-    <div><span>STATUS</span>[Completed / Ongoing]</div>
-    <div><span>MY ROLE</span>[Coordinator / Estimator]</div>
+    <div><span>PROJECT TYPE</span>[AutoCAD / SketchUp]</div>
   </div>
 </div>
 
@@ -72,21 +70,16 @@
 
 <section class="wrap">
   <h2>My Involvement</h2>
-  <p>Describe which phases you were part of — planning, estimating, procurement, site coordination, documentation — and roughly how long or how involved.</p>
   <div class="box mine">
     <h3>MY CONTRIBUTION</h3>
-    <ul>
-      <li>What you personally did</li>
-      <li>Specific tasks or deliverables you owned</li>
-    </ul>
+    <p>I helped with planning, 2D drafting, and 3D visualization for this project.</p>
   </div>
 </section>
 
 <section class="wrap">
   <h2>Documentation &amp; Tools</h2>
-  <p>Note any estimates, scopes of work, drawings, or reports you produced or maintained.</p>
   <div class="tools">
-    <span>AutoCAD</span><span>Quantity Takeoff</span><span>MS Excel</span><span>Site Reports</span>
+    <span>AutoCAD</span><span>SketchUp</span>
   </div>
 </section>
 
@@ -100,11 +93,6 @@
     <div class="ph">Photo / drawing 5</div>
     <div class="ph">Photo / drawing 6</div>
   </div>
-</section>
-
-<section class="wrap">
-  <h2>Outcome</h2>
-  <p>One or two sentences on the result — completion, handover, or current status. Keep it factual.</p>
 </section>
 
 </body>

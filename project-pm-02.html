@@ -41,6 +41,10 @@
 
   .tools{display:flex;gap:8px;flex-wrap:wrap}
   .tools span{font-family:var(--mono);font-size:.75rem;border:1px solid var(--line);padding:5px 10px}
+  .doc-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+  .doc-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--ink);text-decoration:none;color:var(--ink);font-size:.9rem;font-weight:500}
+  .doc-btn:hover{border-color:var(--blue);color:var(--blue)}
+
 
   @media (max-width:700px){
     .meta-strip{grid-template-columns:repeat(2,1fr)}
@@ -68,6 +72,14 @@
 <section class="wrap">
   <h2>Overview</h2>
   <p>2–4 sentences describing the project scope, scale, and what stage(s) of the project this case study covers. Keep this factual and specific rather than promotional.</p>
+</section>
+<section class="wrap">
+  <h2>Project Documents</h2>
+  <p>Complete drawing set (architectural, structural, electrical, plumbing) and the bill of quantities for this project.</p>
+  <div class="doc-buttons">
+    <a class="doc-btn" href="assets/pm-02-plans.pdf" target="_blank" rel="noopener">View Complete Plans (PDF)</a>
+    <a class="doc-btn" href="assets/pm-02-boq.pdf" target="_blank" rel="noopener">View Bill of Quantities (PDF)</a>
+  </div>
 </section>
 
 <section class="wrap">
