@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tisha Anne De Gracia — Civil Engineer | Construction Coordination &amp; Documentation</title>
+<meta name="description" content="Civil Engineering graduate with hands-on construction experience in planning, estimating, coordination, and site execution. AutoCAD &amp; SketchUp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F4F0; --paper-dim:#EAE8E2; --ink:#1B2430; --ink-soft:#3C4552;
+    --steel:#707880; --line:#C9C6BD; --blue:#2C4A73; --blue-dim:#EDF1F6;
+    --orange:#C15A2E;
+    --sans:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .tick{position:relative}
+  .tick::before,.tick::after{content:"";position:absolute;width:14px;height:14px;border:1.5px solid var(--steel);opacity:.5}
+  .tick::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+  .tick::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+
+  /* NAV */
+  header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:10}
+  nav.wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .brand{font-weight:700;font-size:1.05rem;letter-spacing:.01em;text-decoration:none}
+  .brand span{color:var(--blue)}
+  .navlinks{display:flex;gap:28px;font-size:.92rem}
+  .navlinks a{text-decoration:none;color:var(--ink-soft)}
+  .navlinks a:hover{color:var(--blue)}
+  .navlinks a.cta{color:var(--paper);background:var(--blue);padding:8px 16px;border:1px solid var(--blue)}
+
+  /* HERO */
+  .hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+  .hero .label{font-family:var(--mono);font-size:.78rem;color:var(--blue);margin:0 0 14px}
+  h1{font-size:2.5rem;line-height:1.15;margin:0 0 20px;max-width:16ch;font-weight:700}
+  .hero p.lede{font-size:1.15rem;color:var(--ink-soft);max-width:56ch;margin:0 0 32px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:28px;font-family:var(--mono);font-size:.82rem;color:var(--steel);border-top:1px solid var(--line);padding-top:20px}
+  .hero-actions{display:flex;gap:14px;margin-bottom:36px}
+  .hero-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line)}
+  .btn{display:inline-block;padding:12px 22px;font-size:.92rem;font-weight:500;text-decoration:none;border:1px solid var(--ink);}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-ghost{color:var(--ink)}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:.78rem;color:var(--steel);margin:0 0 6px}
+  h2{font-size:1.6rem;margin:0 0 28px}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+  .about-grid p{color:var(--ink-soft);margin:0 0 16px}
+  .story{border-left:2px solid var(--blue);padding-left:20px}
+  .story ol{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.85rem;color:var(--steel)}
+  .story li{padding:6px 0;border-bottom:1px dashed var(--line)}
+  .story li:last-child{border-bottom:none}
+
+  /* SKILLS */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .skill-col{background:var(--paper);padding:24px}
+  .skill-col h3{font-size:.95rem;margin:0 0 14px}
+  .skill-col ul{margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--ink-soft)}
+  .skill-col li{padding:5px 0}
+  .skill-col li::before{content:"—";color:var(--blue);margin-right:8px}
+
+  /* PROJECTS */
+  .cat-intro{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;flex-wrap:wrap;gap:8px}
+  .cat-intro p{margin:0;color:var(--steel);font-size:.9rem;max-width:40ch}
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .card{border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .15s;overflow:hidden}
+  .card:hover{border-color:var(--blue)}
+  .card-img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--blue-dim);border-bottom:1px solid var(--line)}
+  .card-body{padding:14px 16px}
+  .card .ptype{font-family:var(--mono);font-size:.7rem;color:var(--blue);margin:0 0 6px}
+  .card h3{font-size:1rem;margin:0}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-family:var(--mono);font-size:.68rem;color:var(--steel);border:1px solid var(--line);padding:3px 8px}
+  .cad-grid .card{border-style:dashed}
+
+  /* RESUME */
+  .resume-box{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--ink);padding:28px 32px;flex-wrap:wrap;gap:16px}
+  .resume-box p{margin:4px 0 0;color:var(--ink-soft);font-size:.92rem}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .contact-list{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.9rem}
+  .contact-list li{padding:10px 0;border-bottom:1px solid var(--line)}
+  .contact-list a{text-decoration:none;color:var(--blue)}
+  form{display:flex;flex-direction:column;gap:12px}
+  input,textarea{font-family:var(--sans);font-size:.92rem;padding:11px 13px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+  textarea{min-height:110px;resize:vertical}
+  form button{align-self:flex-start}
+
+  footer{padding:28px 0;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--steel)}
+
+  @media (max-width:760px){
+    .navlinks{display:none}
+    h1{font-size:2rem}
+    .hero .wrap{grid-template-columns:1fr}
+    .hero-photo{max-width:220px}
+    .about-grid,.contact-grid{grid-template-columns:1fr}
+    .skills-grid{grid-template-columns:1fr}
+    .projects-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#top">Tisha Anne De Gracia <span>/ CE</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#construction">Construction</a>
+      <a href="#cad">CAD &amp; 3D</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a class="cta" href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="label">CIVIL ENGINEERING GRADUATE — CONSTRUCTION &amp; PROJECT SUPPORT</p>
+      <h1>Hands-on construction experience, from planning to site execution.</h1>
+      <p class="lede">I support construction projects across estimating, documentation, and coordination — with direct onsite experience seeing plans through to execution. Currently AutoCAD/SketchUp-skilled and open to office-based, remote, and project-coordination roles.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#construction">View Projects</a>
+        <a class="btn btn-ghost" href="#resume">Download Resume</a>
+      </div>
+      <div class="hero-meta">
+        <span>BASED IN — BATANGAS CITY, PHILIPPINES</span>
+        <span>FOCUS — ESTIMATING / COORDINATION / DOCUMENTATION</span>
+        <span>TOOLS — AUTOCAD, SKETCHUP</span>
+      </div>
+    </div>
+    <img class="hero-photo tick" src="assets/profile.jpg" alt="Portrait of Tisha Anne De Gracia">
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="kicker">01 — ABOUT</p>
+    <h2>From site work to structured project support.</h2>
+    <div class="about-grid">
+      <div>
+        <p>I graduated in Civil Engineering and built my experience directly on construction sites rather than in a purely academic setting. That work took me through several stages of real projects — helping plan scopes of work, preparing quantity takeoffs and estimates, coordinating with contractors and suppliers, and supporting supervision onsite as work was carried out.</p>
+        <p>Alongside that, I developed technical drafting and modeling skills in AutoCAD and SketchUp, which I use to support documentation, drawings, and visualization for the same kinds of projects.</p>
+        <p>I'm now looking to apply that combination — practical construction knowledge plus technical/documentation skills — in office-based, remote, or hybrid roles: project coordination, estimating support, construction documentation, and similar work.</p>
+      </div>
+      <div class="story tick">
+        <ol>
+          <li>Civil Engineering degree</li>
+          <li>Onsite construction experience</li>
+          <li>Planning, estimating &amp; scope prep</li>
+          <li>Site coordination &amp; monitoring support</li>
+          <li>AutoCAD &amp; SketchUp drafting</li>
+          <li>Now: office-based &amp; remote coordination roles</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="construction">
+  <div class="wrap">
+    <p class="kicker">02 — FEATURED WORK</p>
+    <div class="cat-intro">
+      <h2 style="margin-bottom:0">Construction &amp; Project Coordination</h2>
+      <p>Projects where I supported planning, estimating, coordination, and onsite execution.</p>
+    </div>
+    <div class="projects-grid">
+      <a class="card tick" href="project-pm-01.html">
+        <img class="card-img" src="assets/pm-01-thumb.jpg" alt="D Residence thumbnail">
+        <div class="card-body"><p class="ptype">RESIDENTIAL — 2026</p><h3>D Residence</h3></div>
+      </a>
+      <a class="card tick" href="project-pm-02.html">
+        <img class="card-img" src="assets/pm-02-thumb.jpg" alt="[Project Name 2] thumbnail">
+        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 2]</h3></div>
+      </a>
+      <a class="card tick" href="project-pm-03.html">
+        <img class="card-img" src="assets/pm-03-thumb.jpg" alt="[Project Name 3] thumbnail">
+        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 3]</h3></div>
+      </a>
+      <a class="card tick" href="project-pm-04.html">
+        <img class="card-img" src="assets/pm-04-thumb.jpg" alt="[Project Name 4] thumbnail">
+        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 4]</h3></div>
+      </a>
+      <a class="card tick" href="project-pm-05.html">
+        <img class="card-img" src="assets/pm-05-thumb.jpg" alt="[Project Name 5] thumbnail">
+        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 5]</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="cad">
+  <div class="wrap">
+    <p class="kicker">03 — TECHNICAL WORK</p>
+    <div class="cat-intro">
+      <h2 style="margin-bottom:0">CAD Drafting &amp; 3D Visualization</h2>
+      <p>Drawings and models produced in AutoCAD and SketchUp, shown separately from field/coordination work.</p>
+    </div>
+    <div class="projects-grid cad-grid">
+      <a class="card tick" href="project-cad-01.html">
+        <img class="card-img" src="assets/cad-01-thumb.jpg" alt="[Drawing/Model 1] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 1]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-02.html">
+        <img class="card-img" src="assets/cad-02-thumb.jpg" alt="[Drawing/Model 2] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 2]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-03.html">
+        <img class="card-img" src="assets/cad-03-thumb.jpg" alt="[Drawing/Model 3] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 3]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-04.html">
+        <img class="card-img" src="assets/cad-04-thumb.jpg" alt="[Drawing/Model 4] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 4]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-05.html">
+        <img class="card-img" src="assets/cad-05-thumb.jpg" alt="[Drawing/Model 5] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 5]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-06.html">
+        <img class="card-img" src="assets/cad-06-thumb.jpg" alt="[Drawing/Model 6] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 6]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-07.html">
+        <img class="card-img" src="assets/cad-07-thumb.jpg" alt="[Drawing/Model 7] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 7]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-08.html">
+        <img class="card-img" src="assets/cad-08-thumb.jpg" alt="[Drawing/Model 8] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 8]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-09.html">
+        <img class="card-img" src="assets/cad-09-thumb.jpg" alt="[Drawing/Model 9] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 9]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-10.html">
+        <img class="card-img" src="assets/cad-10-thumb.jpg" alt="[Drawing/Model 10] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 10]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-11.html">
+        <img class="card-img" src="assets/cad-11-thumb.jpg" alt="[Drawing/Model 11] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 11]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-12.html">
+        <img class="card-img" src="assets/cad-12-thumb.jpg" alt="[Drawing/Model 12] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 12]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-13.html">
+        <img class="card-img" src="assets/cad-13-thumb.jpg" alt="[Drawing/Model 13] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 13]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-14.html">
+        <img class="card-img" src="assets/cad-14-thumb.jpg" alt="[Drawing/Model 14] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 14]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-15.html">
+        <img class="card-img" src="assets/cad-15-thumb.jpg" alt="[Drawing/Model 15] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 15]</h3></div>
+      </a>
+      <a class="card tick" href="project-cad-16.html">
+        <img class="card-img" src="assets/cad-16-thumb.jpg" alt="[Drawing/Model 16] thumbnail">
+        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 16]</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="kicker">04 — SKILLS</p>
+    <h2>What I bring to a project</h2>
+    <div class="skills-grid">
+      <div class="skill-col">
+        <h3>Construction &amp; Coordination</h3>
+        <ul>
+          <li>Project planning support</li>
+          <li>Site monitoring</li>
+          <li>Quantity takeoff &amp; estimating</li>
+          <li>Scope of work preparation</li>
+          <li>Material / procurement coordination</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>CAD &amp; Modeling</h3>
+        <ul>
+          <li>AutoCAD 2D drafting</li>
+          <li>Construction drawings</li>
+          <li>SketchUp 3D modeling</li>
+          <li>Visualization &amp; presentation models</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>Documentation &amp; Admin</h3>
+        <ul>
+          <li>Project documentation</li>
+          <li>Reports &amp; estimates</li>
+          <li>Specifications</li>
+          <li>Records &amp; file management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <p class="kicker">05 — RESUME</p>
+    <h2>Full experience &amp; education</h2>
+    <div class="resume-box">
+      <div>
+        <strong>Complete work history, education, and certifications.</strong>
+        <p>Download the PDF for the full breakdown, or view projects above for details on specific work.</p>
+      </div>
+      <a class="btn btn-primary" href="assets/resume.pdf">Download Resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="kicker">06 — CONTACT</p>
+    <h2>Let's talk about a project</h2>
+    <div class="contact-grid">
+      <ul class="contact-list">
+        <li>EMAIL — <a href="mailto:tishaanned@gmail.com">tishaanned@gmail.com</a></li>
+        <li>LOCATION — Batangas City, Philippines (open to remote)</li>
+        <li>LINKEDIN — <a href="#">[optional — add link]</a></li>
+      </ul>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Tisha Anne De Gracia — Civil Engineering</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
