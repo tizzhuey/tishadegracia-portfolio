@@ -73,6 +73,11 @@
 
   /* PROJECTS */
   .cat-intro{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;flex-wrap:wrap;gap:8px}
+  .plans-block{border:1px solid var(--line);padding:20px 24px;margin-bottom:24px}
+  .plans-label{font-family:var(--mono);font-size:.72rem;color:var(--blue);margin:0 0 12px}
+  .doc-buttons{display:flex;gap:12px;flex-wrap:wrap}
+  .doc-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--ink);text-decoration:none;color:var(--ink);font-size:.85rem;font-weight:500}
+  .doc-btn:hover{border-color:var(--blue);color:var(--blue)}
   .cat-intro p{margin:0;color:var(--steel);font-size:.9rem;max-width:40ch}
   .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
   .card{border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .15s;overflow:hidden}
@@ -213,6 +218,15 @@
     <div class="cat-intro">
       <h2 style="margin-bottom:0">CAD Drafting &amp; 3D Visualization</h2>
       <p>Drawings and models produced in AutoCAD and SketchUp</p>
+    </div>
+    <div class="plans-block">
+      <p class="plans-label">COMPLETE SET OF PLANS</p>
+      <div class="doc-buttons">
+        <a class="doc-btn" href="assets/pm-02-plans.pdf" target="_blank" rel="noopener">L Residence — Plans (PDF)</a>
+        <a class="doc-btn" href="assets/pm-03-plans.pdf" target="_blank" rel="noopener">A Residence — Plans (PDF)</a>
+        <a class="doc-btn" href="assets/pm-04-plans.pdf" target="_blank" rel="noopener">D Residence — Plans (PDF)</a>
+        <a class="doc-btn" href="assets/pm-05-plans.pdf" target="_blank" rel="noopener">B Residence — Plans (PDF)</a>
+      </div>
     </div>
     <div class="projects-grid cad-grid">
       <a class="card tick" href="project-cad-01.html">
