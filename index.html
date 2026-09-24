@@ -62,12 +62,14 @@
   .story li:last-child{border-bottom:none}
 
   /* SKILLS */
-  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .skill-col{background:var(--paper);padding:24px}
-  .skill-col h3{font-size:.95rem;margin:0 0 14px}
-  .skill-col ul{margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--ink-soft)}
-  .skill-col li{padding:5px 0}
-  .skill-col li::before{content:"—";color:var(--blue);margin-right:8px}
+  .skills-list{border-top:1px solid var(--line)}
+  .skill-row{display:grid;grid-template-columns:280px 1fr;gap:28px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start}
+  .skill-row-head{display:flex;align-items:baseline;gap:14px}
+  .skill-num{font-family:var(--mono);font-size:.85rem;color:var(--blue)}
+  .skill-row-head h3{font-size:1.4rem;margin:0;font-weight:700;line-height:1.25}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:10px}
+  .skill-tags span{font-size:1rem;padding:9px 18px;border:1px solid var(--line);color:var(--ink-soft);background:var(--paper)}
+  .skill-tags span:hover{border-color:var(--blue);color:var(--blue)}
 
   /* PROJECTS */
   .cat-intro{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;flex-wrap:wrap;gap:8px}
@@ -79,6 +81,8 @@
   .card-body{padding:14px 16px}
   .card .ptype{font-family:var(--mono);font-size:.7rem;color:var(--blue);margin:0 0 6px}
   .card h3{font-size:1rem;margin:0}
+  .card-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .card-badges span{font-family:var(--mono);font-size:.62rem;letter-spacing:.02em;padding:4px 11px;border:1px solid var(--line);border-radius:999px;color:var(--steel)}
   .tags{display:flex;flex-wrap:wrap;gap:6px}
   .tag{font-family:var(--mono);font-size:.68rem;color:var(--steel);border:1px solid var(--line);padding:3px 8px}
   .cad-grid .card{border-style:dashed}
@@ -106,7 +110,7 @@
     .hero .wrap{grid-template-columns:1fr}
     .hero-photo{max-width:220px}
     .about-grid,.contact-grid{grid-template-columns:1fr}
-    .skills-grid{grid-template-columns:1fr}
+    .skill-row{grid-template-columns:1fr;gap:14px}
     .projects-grid{grid-template-columns:1fr}
   }
 </style>
@@ -176,28 +180,28 @@
     <p class="kicker">02 — FEATURED WORK</p>
     <div class="cat-intro">
       <h2 style="margin-bottom:0">Construction &amp; Project Coordination</h2>
-      <p>Projects where I supported planning, estimating, coordination, and onsite execution.</p>
+      <p>Projects where I supported planning, estimating, coordination, and onsite execution. (BOQ, Complete Set of Plans, Actual Site Visits)</p>
     </div>
     <div class="projects-grid">
       <a class="card tick" href="project-pm-01.html">
         <img class="card-img" src="assets/pm-01-thumb.jpg" alt="D Residence thumbnail">
-        <div class="card-body"><p class="ptype">RESIDENTIAL — 2026</p><h3>D Residence</h3></div>
+        <div class="card-body"><p class="ptype">RESIDENTIAL — 2026</p><h3>D Residence</h3><div class="card-badges"><span>3D MODEL</span></div></div>
       </a>
       <a class="card tick" href="project-pm-02.html">
-        <img class="card-img" src="assets/pm-02-thumb.jpg" alt="[Project Name 2] thumbnail">
-        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 2]</h3></div>
+        <img class="card-img" src="assets/pm-02-thumb.jpg" alt="L Residence thumbnail">
+        <div class="card-body"><p class="ptype">RESIDENTIAL — ONGOING</p><h3>L Residence</h3><div class="card-badges"><span>BOQ</span><span>2D PLANS</span><span>3D MODEL</span></div></div>
       </a>
       <a class="card tick" href="project-pm-03.html">
-        <img class="card-img" src="assets/pm-03-thumb.jpg" alt="[Project Name 3] thumbnail">
-        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 3]</h3></div>
+        <img class="card-img" src="assets/pm-03-thumb.jpg" alt="A Residence thumbnail">
+        <div class="card-body"><p class="ptype">RESIDENTIAL — 2025</p><h3>A Residence</h3><div class="card-badges"><span>BOQ</span><span>2D PLANS</span><span>3D MODEL</span></div></div>
       </a>
       <a class="card tick" href="project-pm-04.html">
-        <img class="card-img" src="assets/pm-04-thumb.jpg" alt="[Project Name 4] thumbnail">
-        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 4]</h3></div>
+        <img class="card-img" src="assets/pm-04-thumb.jpg" alt="D Residence thumbnail">
+        <div class="card-body"><p class="ptype">RESIDENTIAL — 2023</p><h3>D Residence</h3><div class="card-badges"><span>BOQ</span><span>2D PLANS</span><span>3D MODEL</span></div></div>
       </a>
       <a class="card tick" href="project-pm-05.html">
-        <img class="card-img" src="assets/pm-05-thumb.jpg" alt="[Project Name 5] thumbnail">
-        <div class="card-body"><p class="ptype">[PROJECT TYPE — YEAR]</p><h3>[Project Name 5]</h3></div>
+        <img class="card-img" src="assets/pm-05-thumb.jpg" alt="B Residence thumbnail">
+        <div class="card-body"><p class="ptype">RESIDENTIAL — 2024</p><h3>B Residence</h3><div class="card-badges"><span>BOQ</span><span>2D PLANS</span><span>3D MODEL</span></div></div>
       </a>
     </div>
   </div>
@@ -208,72 +212,72 @@
     <p class="kicker">03 — TECHNICAL WORK</p>
     <div class="cat-intro">
       <h2 style="margin-bottom:0">CAD Drafting &amp; 3D Visualization</h2>
-      <p>Drawings and models produced in AutoCAD and SketchUp, shown separately from field/coordination work.</p>
+      <p>Drawings and models produced in AutoCAD and SketchUp</p>
     </div>
     <div class="projects-grid cad-grid">
       <a class="card tick" href="project-cad-01.html">
-        <img class="card-img" src="assets/cad-01-thumb.jpg" alt="[Drawing/Model 1] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 1]</h3></div>
+        <img class="card-img" src="assets/cad-01-thumb.jpg" alt="Z Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>Z Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-02.html">
-        <img class="card-img" src="assets/cad-02-thumb.jpg" alt="[Drawing/Model 2] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 2]</h3></div>
+        <img class="card-img" src="assets/cad-02-thumb.jpg" alt="C Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>C Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-03.html">
-        <img class="card-img" src="assets/cad-03-thumb.jpg" alt="[Drawing/Model 3] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 3]</h3></div>
+        <img class="card-img" src="assets/cad-03-thumb.jpg" alt="A Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>A Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-04.html">
-        <img class="card-img" src="assets/cad-04-thumb.jpg" alt="[Drawing/Model 4] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 4]</h3></div>
+        <img class="card-img" src="assets/cad-04-thumb.jpg" alt="B Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>B Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-05.html">
-        <img class="card-img" src="assets/cad-05-thumb.jpg" alt="[Drawing/Model 5] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 5]</h3></div>
+        <img class="card-img" src="assets/cad-05-thumb.jpg" alt="Y Penthouse Unit thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>Y Penthouse Unit</h3></div>
       </a>
       <a class="card tick" href="project-cad-06.html">
-        <img class="card-img" src="assets/cad-06-thumb.jpg" alt="[Drawing/Model 6] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 6]</h3></div>
+        <img class="card-img" src="assets/cad-06-thumb.jpg" alt="J Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>J Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-07.html">
-        <img class="card-img" src="assets/cad-07-thumb.jpg" alt="[Drawing/Model 7] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 7]</h3></div>
+        <img class="card-img" src="assets/cad-07-thumb.jpg" alt="D Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>D Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-08.html">
-        <img class="card-img" src="assets/cad-08-thumb.jpg" alt="[Drawing/Model 8] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 8]</h3></div>
+        <img class="card-img" src="assets/cad-08-thumb.jpg" alt="L Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>L Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-09.html">
-        <img class="card-img" src="assets/cad-09-thumb.jpg" alt="[Drawing/Model 9] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 9]</h3></div>
+        <img class="card-img" src="assets/cad-09-thumb.jpg" alt="O Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>O Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-10.html">
-        <img class="card-img" src="assets/cad-10-thumb.jpg" alt="[Drawing/Model 10] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 10]</h3></div>
+        <img class="card-img" src="assets/cad-10-thumb.jpg" alt="L Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>L Residence</h3></div>
       </a>
       <a class="card tick" href="project-cad-11.html">
-        <img class="card-img" src="assets/cad-11-thumb.jpg" alt="[Drawing/Model 11] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 11]</h3></div>
+        <img class="card-img" src="assets/cad-11-thumb.jpg" alt="C Lanai thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>C Lanai</h3></div>
       </a>
       <a class="card tick" href="project-cad-12.html">
-        <img class="card-img" src="assets/cad-12-thumb.jpg" alt="[Drawing/Model 12] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 12]</h3></div>
+        <img class="card-img" src="assets/cad-12-thumb.jpg" alt="Carport &amp; Kitchen Expansion thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>Carport &amp; Kitchen Expansion</h3></div>
       </a>
       <a class="card tick" href="project-cad-13.html">
-        <img class="card-img" src="assets/cad-13-thumb.jpg" alt="[Drawing/Model 13] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 13]</h3></div>
+        <img class="card-img" src="assets/cad-13-thumb.jpg" alt="C Pool Cabana thumbnail">
+        <div class="card-body"><p class="ptype">SKETCHUP</p><h3>C Pool Cabana</h3></div>
       </a>
       <a class="card tick" href="project-cad-14.html">
-        <img class="card-img" src="assets/cad-14-thumb.jpg" alt="[Drawing/Model 14] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 14]</h3></div>
+        <img class="card-img" src="assets/cad-14-thumb.jpg" alt="C Chapel thumbnail">
+        <div class="card-body"><p class="ptype">SKETCHUP</p><h3>C Chapel</h3></div>
       </a>
       <a class="card tick" href="project-cad-15.html">
-        <img class="card-img" src="assets/cad-15-thumb.jpg" alt="[Drawing/Model 15] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 15]</h3></div>
+        <img class="card-img" src="assets/cad-15-thumb.jpg" alt="C Cafe thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD + SKETCHUP</p><h3>C Cafe</h3></div>
       </a>
       <a class="card tick" href="project-cad-16.html">
-        <img class="card-img" src="assets/cad-16-thumb.jpg" alt="[Drawing/Model 16] thumbnail">
-        <div class="card-body"><p class="ptype">[AUTOCAD or SKETCHUP]</p><h3>[Drawing/Model 16]</h3></div>
+        <img class="card-img" src="assets/cad-16-thumb.jpg" alt="B Residence thumbnail">
+        <div class="card-body"><p class="ptype">AUTOCAD</p><h3>B Residence</h3></div>
       </a>
     </div>
   </div>
@@ -283,34 +287,34 @@
   <div class="wrap">
     <p class="kicker">04 — SKILLS</p>
     <h2>What I bring to a project</h2>
-    <div class="skills-grid">
-      <div class="skill-col">
-        <h3>Construction &amp; Coordination</h3>
-        <ul>
-          <li>Project planning support</li>
-          <li>Site monitoring</li>
-          <li>Quantity takeoff &amp; estimating</li>
-          <li>Scope of work preparation</li>
-          <li>Material / procurement coordination</li>
-        </ul>
+    <div class="skills-list">
+      <div class="skill-row">
+        <div class="skill-row-head"><span class="skill-num">01</span><h3>Construction &amp; Coordination</h3></div>
+        <div class="skill-tags">
+          <span>Project planning support</span>
+          <span>Site monitoring</span>
+          <span>Quantity takeoff &amp; estimating</span>
+          <span>Scope of work preparation</span>
+          <span>Material / procurement coordination</span>
+        </div>
       </div>
-      <div class="skill-col">
-        <h3>CAD &amp; Modeling</h3>
-        <ul>
-          <li>AutoCAD 2D drafting</li>
-          <li>Construction drawings</li>
-          <li>SketchUp 3D modeling</li>
-          <li>Visualization &amp; presentation models</li>
-        </ul>
+      <div class="skill-row">
+        <div class="skill-row-head"><span class="skill-num">02</span><h3>CAD &amp; Modeling</h3></div>
+        <div class="skill-tags">
+          <span>AutoCAD 2D drafting</span>
+          <span>Construction drawings</span>
+          <span>SketchUp 3D modeling</span>
+          <span>Visualization &amp; presentation models</span>
+        </div>
       </div>
-      <div class="skill-col">
-        <h3>Documentation &amp; Admin</h3>
-        <ul>
-          <li>Project documentation</li>
-          <li>Reports &amp; estimates</li>
-          <li>Specifications</li>
-          <li>Records &amp; file management</li>
-        </ul>
+      <div class="skill-row">
+        <div class="skill-row-head"><span class="skill-num">03</span><h3>Documentation &amp; Admin</h3></div>
+        <div class="skill-tags">
+          <span>Project documentation</span>
+          <span>Reports &amp; estimates</span>
+          <span>Specifications</span>
+          <span>Records &amp; file management</span>
+        </div>
       </div>
     </div>
   </div>
